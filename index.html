@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              customWhite: "#ffffff",
+              customAqua: "#00BC9E",
+              aqua: "#00FFD4",
+              customBlue: "#382CBE",
+              customBlack: "#000000",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Tailwind css</title>
+  </head>
+  <body>
+    <!-- hero section && first section -->
+    <section class="hero px-5 lg:px-20">
+      <!-- navigation -->
+      <header class="header flex justify-between py-8">
+        <!-- first_div   -->
+        <div class="logo-container gap-3 flex items-center">
+          <img src="assets/logo.svg" alt="logo" />
+          <h1 class="font-semibold text-white text-lg">DEV SPACE</h1>
+        </div>
+        <!-- second_div -->
+        <nav class="flex items-center gap-10 max-[843px]:hidden">
+          <ul
+            class="flex items-center text-lg gap-10 font-semibold text-slate-300"
+          >
+            <li><a href="#What_we_do">What we do</a></li>
+            <li><a href="#How_we-work">How we work</a></li>
+            <li><a href="#Pricing">Pricing</a></li>
+            <li><a href="#Our_Team">Our Team</a></li>
+          </ul>
+          <!-- nav button -->
+          <button
+            class="bg-customAqua hover:bg-customBlue text-white rounded-3xl py-2 px-6"
+          >
+            Download
+          </button>
+        </nav>
+      </header>
+
+      <!-- hero bg -->
+      <div class="mt-0 min-[843px]:mt-5 pb-5 flex items-center justify-between">
+        <!-- hero-description -->
+        <div class="hero-description space-y-8">
+          <h1
+            class="text-aqua font-bold md:font-extrabold text-2xl md:text-6xl leading-snug md:leading-normal"
+          >
+            Design UI <br />
+            App Development <br />
+            Consultant Services
+          </h1>
+
+          <p class="text-slate-300 text-md md:text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod <br />
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <button
+            class="border-[1px] whitespace-nowrap hover:bg-customBlue hover:border-customBlue border-slate-300 px-5 md:px-10 py-2 text-white text-md md:text-xl"
+          >
+            START A PROJECT TODAY
+          </button>
+        </div>
+        <!-- hero-image -->
+        <img
+          src="assets/hero-image.svg"
+          alt="hero image"
+          class="w-[300px] max-[843px]:hidden min-[969px]:w-[500px]"
+        />
+      </div>
+    </section>
+
+    <!-- sponsors section && second section -->
+    <section class="bg-slate-200 p-10">
+      <h2
+        class="text-center text-lg text-gray-400 underline underline-offset-[14px]"
+      >
+        Trusted By The Best Clients
+      </h2>
+      <div
+        class="img-sponsor-container flex-wrap mx-auto flex justify-center mt-10 items-center gap-5 md:gap-14"
+      >
+        <img
+          src="assets/algolia.svg"
+          class="w-[90px] md:w-[150px] object-cover object-center"
+          alt="algolia logo"
+        />
+        <img
+          src="assets/lapa-logo.svg"
+          class="w-[90px] md:w-[150px] object-cover object-center"
+          alt="lapa-logo"
+        />
+        <img
+          src="assets/hugo.svg"
+          class="w-[90px] md:w-[150px] object-cover object-center"
+          alt="hugo logo"
+        />
+        <img
+          src="assets/codecademy.svg"
+          class="w-[90px] md:w-[150px] object-cover object-center"
+          alt="codecademy logo"
+        />
+        <img
+          src="assets/aws.svg"
+          class="w-[50px] md:w-[70px] object-cover object-center"
+          alt="aws log"
+        />
+        <img
+          src="assets/stripe.svg"
+          class="w-[50px] md:w-[70px] object-cover object-center"
+          alt="stripe logo"
+        />
+      </div>
+    </section>
+
+    <!-- what we do section and third section -->
+    <section class="bg-customWhite py-16" id="What_We_Do">
+      <h2
+        class="text-center text-lg text-gray-400 underline underline-offset-[14px]"
+      >
+        What We Do
+      </h2>
+
+      <div
+        class="card-holder mt-10 gap-20 px-20 flex flex-col min-[854px]:flex-row items-center justify-center"
+      >
+        <div
+          class="card text-lg text-center border-b-[1px] border-b-slate-400 min-[854px]:border-0 pb-5"
+        >
+          <img
+            src="assets/interface-design.svg"
+            class="w-[60px] m-auto mb-5"
+            alt="interface-design"
+          />
+          <h2 class="font-extrabold">Interface Design</h2>
+          <p class="text-slate-400 pb-5">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+          <a href="#" class="text-customBlue">Learn more</a>
+        </div>
+        <div
+          class="card text-lg text-center border-b-[1px] border-b-slate-400 min-[854px]:border-0 pb-5"
+        >
+          <img
+            src="assets/web-application.svg"
+            class="w-[60px] m-auto mb-5"
+            alt="web-application"
+          />
+          <h2 class="font-extrabold">Web Application</h2>
+          <p class="text-slate-400 pb-5">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+          <a href="#" class="text-customBlue">Learn more</a>
+        </div>
+        <div
+          class="card text-lg text-center border-b-[1px] border-b-slate-400 min-[854px]:border-0 pb-5"
+        >
+          <img
+            src="assets/software-development.svg"
+            class="w-[60px] m-auto mb-5"
+            alt="software-development"
+          />
+          <h2 class="font-extrabold">Software Development</h2>
+          <p class="text-slate-400 pb-5">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+          <a href="#" class="text-customBlue">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- how we work and fourth section -->
+    <section class="bg-[#0a007e] py-20" id="How_we_work">
+      <h2
+        class="text-center text-lg text-gray-400 underline underline-offset-[14px]"
+      >
+        How We Work
+      </h2>
+
+      <h1 class="font-extrabold text-5xl text-customWhite text-center py-8">
+        We build <span class="text-aqua">reliable infrastructure</span>, use
+        <br />
+        comprehensive in-house tools.
+      </h1>
+
+      <div
+        class="pricing-holder mt-5 flex-col min-[895px]:flex-row px-10 flex gap-5 items-center justify-center"
+      >
+        <div class="pricing bg-customWhite text-center px-5 py-8 w-[380px]">
+          <p>PRO</p>
+          <hr class="border-[.5px] border-slate-200 my-5" />
+          <div class="flex items-center justify-center">
+            <h1 class="font-extrabold text-4xl pr-2 pb-4">$2500</h1>
+            <span> / month</span>
+          </div>
+          <p class="pb-5 text-lg">
+            <span class="font-extrabold">10</span> billable hours included per
+            month. Billable hourly rate of
+            <span class="font-extrabold">$300</span> after the included 10 hours
+            are utilized. 24/7/365 on-call and 99.9% SLA Communication via
+            ticketing system and e-mail.
+          </p>
+          <button
+            class="py-3 px-10 bg-customBlack text-center text-white border-[1px] border-customBlue hover:bg-customBlue"
+          >
+            Contact Us
+          </button>
+        </div>
+        <div class="pricing bg-customWhite text-center px-5 py-8 w-[380px]" id="Pricing">
+          <p>PREMIUM</p>
+          <hr class="border-[.5px] border-slate-200 my-5" />
+          <div class="flex items-center justify-center">
+            <h1 class="font-extrabold text-4xl pr-2 pb-4">$5000</h1>
+            <span> / month</span>
+          </div>
+          <p class="pb-5 text-lg">
+            <span class="font-extrabold">10</span> billable hours included per
+            month. Billable hourly rate of
+            <span class="font-extrabold">$300</span> after the included 10 hours
+            are utilized. 24/7/365 on-call and 99.9% SLA Communication via
+            ticketing system and e-mail.
+          </p>
+          <button
+            class="py-3 px-10 bg-customBlack text-center text-white border-[1px] border-customBlue hover:bg-customBlue"
+          >
+            Contact Us
+          </button>
+        </div>
+        <div class="pricing bg-customWhite text-center px-5 py-8 w-[380px]">
+          <p>ENTERPRISE</p>
+          <hr class="border-[.5px] border-slate-200 my-5" />
+          <div class="flex items-center justify-center">
+            <h1 class="font-extrabold text-4xl pr-2 pb-4">$15000</h1>
+            <span> / month</span>
+          </div>
+          <p class="pb-5 text-lg">
+            <span class="font-extrabold">10</span> billable hours included per
+            month. Billable hourly rate of
+            <span class="font-extrabold">$300</span> after the included 10 hours
+            are utilized. 24/7/365 on-call and 99.9% SLA Communication via
+            ticketing system and e-mail.
+          </p>
+          <button
+            class="py-3 px-10 bg-customBlack text-center text-white border-[1px] border-customBlue hover:bg-customBlue"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- meet our team section -->
+    <section class="bg-[#F7F7F7] py-14" id="Our_Team">
+      <h2
+        class="text-center text-lg text-gray-400 underline underline-offset-[14px]"
+      >
+        Meet Our Team
+      </h2>
+
+      <div
+        class="team-holder mt-10 flex flex-col items-center gap-5 min-[895px]:gap-0 min-[895px]:flex-row justify-around"
+      >
+        <div class="w-[250px] text-center rounded-sm">
+          <img
+            src="assets/team-1.jpg"
+            class="w-full rounded-sm"
+            alt=" team 1"
+          />
+          <h1
+            class="text-[#807FE2] mt-5 hover:text-blue-800 text-xl cursor-pointer font-extrabold"
+          >
+            John Doe
+          </h1>
+          <h2 class="text-lg text-gray-400">DevOps</h2>
+        </div>
+
+        <div class="w-[250px] text-center rounded-sm">
+          <img
+            src="assets/team-2.jpg"
+            class="w-full rounded-sm"
+            alt=" team 1"
+          />
+          <h1
+            class="text-[#807FE2] mt-5 hover:text-blue-800 text-xl cursor-pointer font-extrabold"
+          >
+            Tinh Nguyen
+          </h1>
+          <h2 class="text-lg text-gray-400">Designer</h2>
+        </div>
+
+        <div class="w-[250px] text-center rounded-sm">
+          <img
+            src="assets/team-3.jpg"
+            class="w-full rounded-sm"
+            alt=" team 1"
+          />
+          <h1
+            class="text-[#807FE2] mt-5 hover:text-blue-800 text-xl cursor-pointer font-extrabold"
+          >
+            Maria Oto
+          </h1>
+          <h2 class="text-lg text-gray-400">Developer</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- we love open source section -->
+    <section class="text-center space-y-8 py-14">
+      <h2
+        class="text-center text-lg text-gray-400 underline underline-offset-[14px]"
+      >
+        We Love Open Source
+      </h2>
+
+      <img src="assets/open-source.svg" class="mx-auto" alt="open-source" />
+      <h1 class="text-3xl md:text-7xl font-bold md:font-extrabold">
+        We're making <br />
+        Open Source Software
+      </h1>
+
+      <button class="font-semibold border-[1px] border-slate-300 py-3 px-5">
+        Follow us on Github
+      </button>
+    </section>
+
+    <!-- footer section -->
+    <!-- <footer class="bg-customBlue py-10 flex justify-center items-center"> -->
+      <footer class="bg-customBlue py-10">
+
+      <!-- <section class="grid grid-cols-2 min-[678px]:grid-cols-4 gap-14  min-[1136px]:gap-[13rem] items-center justify-between mx-auto "> -->
+      <section class="w-full flex justify-around items-center flex-wrap">
+        <!-- first link -->
+        <div class="w-fit">
+          <h1 class="text-white text-lg mb-3 font-bold">Services</h1>
+          <ul class="text-slate-200 text-lg">
+            <li>DevOps</li>
+            <li>Development</li>
+            <li>Consultant</li>
+          </ul>
+        </div>
+        <!-- second link -->
+        <div class="w-fit">
+          <h1 class="text-white text-lg mb-3 font-bold">Services</h1>
+          <ul class="text-slate-200 text-lg">
+            <li>DevOps</li>
+            <li>Development</li>
+            <li>Consultant</li>
+          </ul>
+        </div>
+        <!-- third link -->
+        <div class="w-fit">
+          <h1 class="text-white text-lg mb-3 font-bold">Services</h1>
+          <ul class="text-slate-200 text-lg">
+            <li>DevOps</li>
+            <li>Development</li>
+            <li>Consultant</li>
+          </ul>
+        </div>
+        <!-- fourth link -->
+        <div class="w-fit">
+          <h1 class="text-white text-lg mb-3 font-bold">Services</h1>
+          <ul class="text-slate-200 text-lg">
+            <li>DevOps</li>
+            <li>Development</li>
+            <li>Consultant</li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
